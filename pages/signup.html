@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../reset.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Signup for Estore</h1>
+    </header>
+    <h2>Please complete the below details</h2>
+
+    <div class="signupContainer">
+      <form id="userForm" method="post">
+        <div class="field-container">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="input-group" name="firstName" placeholder="Enter First Name" />
+        </div>
+        <div class="field-container">
+          <label for="">Last Name:</label>
+          <input type="text" class="input-group" name="lastName" placeholder="Enter Last Name"/>
+        </div>
+        <div class="field-container">
+          <label for="username">Username:</label>
+          <input type="text" class="input-group" name="username" placeholder="Enter Username"/>
+        </div>
+        <div class="field-container">
+          <label for="email">Email:</label>
+          <input type="email" class="input-group" name="email" placeholder="Enter Email"/>
+        </div>
+        <div class="field-container">
+          <label for="password">Password:</label>
+          <input type="password" class="input-group" name="password" placeholder="Enter Password"/>
+        </div>
+        <div class="signup-btn">
+          <button class="mainButtons" id="signupButton">Signup</button>
+        </div>
+      </form>
+    </div>
+
+<script src="../script.js"></script>
+  </body>
+</html>

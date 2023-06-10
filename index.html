@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estore</title>
-</head>
-<body>
-    <header>
-        <h1>Estore</h1>
-    </header>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to Estore</h1>
+    </header> 
+    <nav class="nav-items">
+        <button class="mainButtons">
+          <a href="pages/signup.html">Signup</a>
+        </button>
+        <button class="mainButtons">
+          <a href="pages/login.html">Login</a>
+        </button>
+    </nav>   
 
-    <div class="home">
-
-        <ul>
-            <li><a href="/home/login.html" class="login">Login</a></li>
-            <li><a href="/home/signup.html" class="signup">Signup</a></li>
-        </ul>
-
-    </div>
-
-    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

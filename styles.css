@@ -1,30 +1,90 @@
-header h1{
-    text-align: center;
+.header{
+  margin: auto;
+  text-align: center;
+  font-size: 2.8em;
+  padding: 0.7em;
+
 }
-div li a{
-    text-decoration: none;
+
+.nav-items a{
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  
 }
-/* div ul{
-    white-space: nowrap;
-} */
-/* .home {
-    text-align: center;
-} */
-/* ul{
-    list-style-type: none;
-} */
-div li{
-    display: inline-block;
-    font-size: 24px;
-    /* width: 25%; */
-    padding: 25px;
+
+.nav-items {
+  text-align: center;
+
 }
-ul{
-    text-align: center;
-    padding: 50px;
+
+.nav-items .mainButtons{
+  padding: 0.5em 1.0em;
+  margin: 0.8%;
+  border: 0.1em none black;
+  width: 5em;
+  font-size: 1.2em;
+  color: white;
+  background-color: hsl(215, 50%, 23%);
+  height: 2.3em;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
 }
-input{
-    margin-left: 25px;
-    text-align: center;
-    
+
+.nav-items .mainButtons:hover{
+  background-color: hsl(215, 50%, 60%);
+
+}
+
+.signupContainer{
+  display: flex;
+  
+  justify-content: center;
+  font-size: 1.5em;
+  
+}
+
+
+.field-container{
+  text-align: right;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  
+}
+
+
+.input-group{
+  border: 0.05em solid black;
+  width: 14em;
+  height: 1.8em;
+  border-radius: 6px;
+  text-align: center;
+}
+
+
+
+.signup-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+.signup-btn button{
+  border: 0.1em none black;
+  width: 5em;
+  font-size: 0.9em;
+  color: white;
+  background-color: hsl(215, 50%, 23%);
+  height: 2.0em;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  
+}
+
+
+#userForm {
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 0.5em;
 }
