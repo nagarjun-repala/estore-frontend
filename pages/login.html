@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estore login</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../reset.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="header loginDisplay">
+      <h1>Login for Estore</h1>
+    </header>
+    <div class="loginContainer loginDisplay">
+      <form id="userLoginForm" method="post">
+        <div class="field-container">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            class="input-group"
+            name="username"
+            placeholder="Enter Username"
+            required
+          />
+        </div>
+        <div class="field-container">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            class="input-group"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+        </div>
+        <div class="login-btn">
+          <button class="mainButtons btnClass" id="loginButton">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="../src/login.js" type="module"></script>
+  </body>
 </html>

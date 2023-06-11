@@ -1,3 +1,25 @@
+.btnClass {
+  padding: 0.4em 0.8em;
+  border: 0.1em none black;
+  width: 6em;
+  font-size: 1.2em;
+  color: white;
+  background-color: hsl(215, 50%, 23%);
+  height: 2.3em;
+  transition: background-color 0.3s ease;
+  border-radius: 0.2em;
+  margin: 0 1em;
+
+}
+.btnClass a {
+  text-decoration: none;
+  color: white;
+}
+
+.btnClass:hover{
+  background-color: hsl(215, 50%, 60%);
+}
+
 .header{
   margin: auto;
   text-align: center;
@@ -6,44 +28,20 @@
 
 }
 
-.nav-items a{
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  
-}
 
 .nav-items {
   text-align: center;
-
 }
 
-.nav-items .mainButtons{
-  padding: 0.5em 1.0em;
-  margin: 0.8%;
-  border: 0.1em none black;
-  width: 5em;
-  font-size: 1.2em;
-  color: white;
-  background-color: hsl(215, 50%, 23%);
-  height: 2.3em;
-  transition: background-color 0.3s ease;
-  border-radius: 6px;
-}
 
-.nav-items .mainButtons:hover{
-  background-color: hsl(215, 50%, 60%);
 
-}
-
-.signupContainer{
+.signupContainer, .loginContainer{
   display: flex;
   
   justify-content: center;
   font-size: 1.5em;
   
 }
-
 
 .field-container{
   text-align: right;
@@ -52,25 +50,27 @@
   
 }
 
-
 .input-group{
   border: 0.05em solid black;
   width: 14em;
   height: 1.8em;
   border-radius: 6px;
+  padding: 0.1em 0.5em;
+}
+
+.input-group::placeholder{
+
   text-align: center;
 }
 
-
-
-.signup-btn{
+.signup-btn, .login-btn{
   display: flex;
   justify-content: center;
   margin-top: 10%;
   margin-left: 15%;
 }
 
-.signup-btn button{
+.signup-btn button, .login-btn button{
   border: 0.1em none black;
   width: 5em;
   font-size: 0.9em;
@@ -87,4 +87,19 @@
   margin-right: 5%;
   margin-left: 5%;
   padding: 0.5em;
+}
+
+.successSignup{
+  display: none;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.successSignup button {
+  font-size: 0.7em;
+}
+
+.successSignup div{
+  margin: 2% 0;
 }

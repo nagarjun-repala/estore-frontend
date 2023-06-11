@@ -10,39 +10,81 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header signupDisplay">
       <h1>Signup for Estore</h1>
     </header>
-    <h2>Please complete the below details</h2>
+    <!-- <h2 class="signupDisplay">Please complete the below details</h2> -->
 
-    <div class="signupContainer">
-      <form id="userForm" method="post">
+    <div class="signupContainer signupDisplay">
+      <form id="userSignupForm" method="post">
         <div class="field-container">
           <label for="firstName">First Name:</label>
-          <input type="text" class="input-group" name="firstName" placeholder="Enter First Name" />
+          <input
+            type="text"
+            class="input-group"
+            name="firstName"
+            placeholder="Enter First Name"
+            required
+          />
         </div>
         <div class="field-container">
           <label for="">Last Name:</label>
-          <input type="text" class="input-group" name="lastName" placeholder="Enter Last Name"/>
+          <input
+            type="text"
+            class="input-group"
+            name="lastName"
+            placeholder="Enter Last Name"
+            required
+          />
         </div>
         <div class="field-container">
           <label for="username">Username:</label>
-          <input type="text" class="input-group" name="username" placeholder="Enter Username"/>
+          <input
+            type="text"
+            class="input-group"
+            name="username"
+            placeholder="Enter Username"
+            required
+          />
         </div>
         <div class="field-container">
           <label for="email">Email:</label>
-          <input type="email" class="input-group" name="email" placeholder="Enter Email"/>
+          <input
+            type="email"
+            class="input-group"
+            name="email"
+            placeholder="Enter Email"
+            required
+          />
         </div>
         <div class="field-container">
           <label for="password">Password:</label>
-          <input type="password" class="input-group" name="password" placeholder="Enter Password"/>
+          <input
+            type="password"
+            class="input-group"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
         </div>
         <div class="signup-btn">
-          <button class="mainButtons" id="signupButton">Signup</button>
+          <button class="mainButtons btnClass" id="signupButton">Signup</button>
         </div>
-      </form>
+      </form>   
     </div>
 
-<script src="../script.js"></script>
+    <div class="successSignup">
+      <div>
+        <h2>Signup completed visit the login page:</h2>
+      </div>
+
+      <div>
+        <button class="btnClass">
+          <a href="../pages/login.html">Login</a>
+        </button>
+      </div>
+
+    </div>   
+    <script src="../src/signup.js"  type="module"></script>
   </body>
 </html>
