@@ -2,10 +2,9 @@ import { formDataToRawObj, submitUserData } from '../utils/util.js'
 import { baseUrl, registerPath } from './constant.js'
 
 const signupForm = document.querySelector('#userSignupForm')
-
 const signupDisplay = document.querySelectorAll('.signupDisplay')
 const successSignup = document.querySelectorAll('.successSignup')
-const inputGroup = document.querySelectorAll(".input-group")
+const inputGroup = document.querySelectorAll(".input-group-signup")
 
 const testData = {
   firstName : "Nagarjun",

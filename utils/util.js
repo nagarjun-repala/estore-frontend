@@ -9,12 +9,10 @@ export function formDataToRawObj(formData) {
 
 export async function submitUserData(userDataRawObj, baseUrl, path){
   try{
-    // console.log(userDataRawObj)
     const config = {headers: {'Content-Type': 'application/json'}};
     const response = await axios.post(`${baseUrl}${path}`, JSON.stringify(userDataRawObj), config)
     return response
-    
   }catch(error){
-    console.log("Error in submiting the data", error)
+    return error;
   } 
 }

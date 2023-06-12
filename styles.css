@@ -50,7 +50,7 @@
   
 }
 
-.input-group{
+.input-group-signup, .input-group-login {
   border: 0.05em solid black;
   width: 14em;
   height: 1.8em;
@@ -58,7 +58,7 @@
   padding: 0.1em 0.5em;
 }
 
-.input-group::placeholder{
+.input-group-signup::placeholder, .input-group-login::placeholder{
 
   text-align: center;
 }
