@@ -31,21 +31,5 @@ loginForm.addEventListener('submit', async function(event){
     const jwtToken = result.headers.authorization;
     localStorage.setItem("jwtToken", jwtToken);
     window.location.href = "../pages/home.html"
-    // console.log('hello', userHeader)
-    // const scriptElement = document.createElement('script');
-    // scriptElement.src = 'login.js';
-
-    // window.document.body.append(scriptElement)
-    
-    // window.addEventListener("DOMContentLoaded", async (event) => {
-      
-
-
-    // });
-    // window.location.href = "../pages/home.html"
-    
-
-    
-    
 })
 
