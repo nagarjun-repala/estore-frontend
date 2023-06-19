@@ -16,3 +16,13 @@ export async function submitUserData(userDataRawObj, baseUrl, path){
     return error;
   } 
 }
+
+export function createDynamicElement(tagName, textContent, classNames = [], attributes = {}){
+  const element = document.createElement(tagName);
+  element.textContent = textContent;
+  classNames.forEach(className => element.classList.add(className));
+  for(const [attr, value] of Object.entries(attributes)){
+    element.setAttribute(attr, value);
+  }
+  return element;
+}

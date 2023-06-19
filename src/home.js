@@ -1,4 +1,4 @@
-
+import { createDynamicElement } from "../utils/util.js";
 import { baseUrl, userProfilePath, verifyUserPath } from "./constant.js";
 
 let loggedIn = false;
@@ -50,6 +50,31 @@ if(!loggedIn){
 
 const userProfileDetails = await getUserProfile(tokenDetails);
 const userWelcomeBody = document.querySelector('#userWelcome');
-const createWelcomeHeader = document.createElement('h1');
-userWelcomeBody.append(createWelcomeHeader)
-createWelcomeHeader.innerText = `Welcome ${userProfileDetails.firstName} ${userProfileDetails.lastName}`;
+const userHeading = `Welcome ${userProfileDetails.firstName} ${userProfileDetails.lastName}`;
+
+
+const welcomeHeader = createDynamicElement('h1', userHeading, [], {id: 'welcomeHeader', style: 'display: inline-block;'})
+const logoutDiv = createDynamicElement('div', '', ['logout-btn-div'], {});
+const logoutButton = createDynamicElement('button', 'Logout', ['mainButtons', 'btnClass'], {id: 'logoutButton'});
+
+
+logoutDiv.appendChild(logoutButton);
+userWelcomeBody.appendChild(welcomeHeader);
+userWelcomeBody.appendChild(logoutDiv);
+
+
+const selectLogoutButton = document.querySelector(`#${logoutButton.id}`);
+selectLogoutButton.addEventListener('click', function(event){
+  localStorage.clear();
+  window.location.href = "../pages/login.html"
+})
+
+// when the user loses focus
+window.addEventListener("blur", () => {
+  document.title = "Breakup";
+});
+
+// when the user's focus is back to your tab (website) again
+window.addEventListener("focus", () => {
+  document.title = "Patch Up";
+});
