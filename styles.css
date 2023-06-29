@@ -112,3 +112,11 @@
 .successSignup div{
   margin: 2% 0;
 }
+
+.homeProducts {
+  display: inline-block;
+  height: 15em;
+  width: 12em;
+  padding: 1em;
+}
+

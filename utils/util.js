@@ -26,3 +26,13 @@ export function createDynamicElement(tagName, textContent, classNames = [], attr
   }
   return element;
 }
+
+export async function getProducts(baseUrl, path, bearerToken){
+  try{
+    const config = {headers: {'Authorization': `Bearer ${bearerToken}`,'Content-Type': 'application/json'}};
+    const response = await axios.get(`${baseUrl}${path}`, config)
+    return response
+  }catch(error){
+    return error;
+  } 
+}

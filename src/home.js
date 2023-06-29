@@ -1,5 +1,5 @@
-import { createDynamicElement } from "../utils/util.js";
-import { baseUrl, userProfilePath, verifyUserPath } from "./constant.js";
+import { createDynamicElement, getProducts } from "../utils/util.js";
+import { baseUrl, userProfilePath, verifyUserPath, allProducts } from "./constant.js";
 
 let loggedIn = false;
 const tokenDetails = getUserJwtTokenDetails();
@@ -69,12 +69,21 @@ selectLogoutButton.addEventListener('click', function(event){
   window.location.href = "../pages/login.html"
 })
 
-// when the user loses focus
-window.addEventListener("blur", () => {
-  document.title = "Breakup";
-});
+const productsDiv = createDynamicElement('div', '', [], {});
 
-// when the user's focus is back to your tab (website) again
-window.addEventListener("focus", () => {
-  document.title = "Patch Up";
-});
+
+const productsRes = await getProducts(baseUrl, allProducts, tokenDetails.token);
+
+if(!productsRes.data){
+  console.log(productsRes);
+}
+
+for (const product of productsRes.data) {
+  const productElement = createDynamicElement('img', '', ['homeProducts'], {src: product.imageUrl})
+  productsDiv.appendChild(productElement)
+}
+
+userWelcomeBody.appendChild(productsDiv);
+
+
+
